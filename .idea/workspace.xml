@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb73c727-a67f-425b-9357-638dd99bacc4" name="Changes" comment="init repository">
-      <change afterPath="$PROJECT_DIR$/countryApp/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countryApp/src/app/countries/pages/country-page/country-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/countryApp/src/app/countries/pages/country-page/country-page.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,24 +28,26 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.18.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personal/angular-2023/countryApp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;wsl://Ubuntu@/home/dramiro/.nvm/versions/node/v18.13.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "javascript.nodejs.core.library.configured.version": "18.13.0",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "last_opened_file_path": "/home/dramiro/dev/2023-angular/countryApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/home/dramiro/dev/2023-angular/countryApp/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
@@ -70,6 +73,8 @@
       <updated>1674989412632</updated>
       <workItem from="1674989413982" duration="843000" />
       <workItem from="1674990287780" duration="857000" />
+      <workItem from="1675164225795" duration="50000" />
+      <workItem from="1675175205097" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="init repository">
       <created>1674989468777</created>

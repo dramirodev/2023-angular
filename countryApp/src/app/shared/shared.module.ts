@@ -6,17 +6,25 @@ import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {ContactPageComponent} from './pages/contact-page/contact-page.component';
 import {HomePageComponent} from './pages/home-page/home-page.component';
+import {LoadingComponent} from './components/loading/loading.component';
 
 
 @NgModule({
   declarations: [
-    HomePageComponent,
     AboutPageComponent,
-    SidebarComponent,
     ContactPageComponent,
-    SearchBoxComponent
+    HomePageComponent,
+    LoadingComponent,
+    SearchBoxComponent,
+    SidebarComponent,
   ],
-  exports: [HomePageComponent, AboutPageComponent, SidebarComponent, SearchBoxComponent],
+  exports: [
+    AboutPageComponent,
+    HomePageComponent,
+    LoadingComponent,
+    SearchBoxComponent,
+    SidebarComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule
