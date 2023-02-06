@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {ToggleCasePiPe} from "./pipes/toggle-case.pìpe";
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
@@ -13,8 +14,9 @@ import { OrderPageComponent } from './pages/order-page/order-page.component';
   declarations: [
     BasicsPageComponent,
     NumbersPageComponent,
+    OrderPageComponent,
     UncommonPageComponent,
-    OrderPageComponent
+    ToggleCasePiPe
   ],
   imports: [
     CommonModule,
