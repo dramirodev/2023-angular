@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {ReactiveFormsModule} from "@angular/forms";
 import {MaterialModule} from "../material/material.module";
 
 import {HeroesRoutingModule} from './heroes-routing.module';
@@ -25,7 +26,8 @@ import { HeroImagePipe } from './pipes/hero-image.pipe';
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class HeroesModule {

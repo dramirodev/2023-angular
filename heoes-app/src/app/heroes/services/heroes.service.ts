@@ -1,6 +1,6 @@
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
-import {Observable} from "rxjs";
+import {catchError, Observable, of} from "rxjs";
 import {enviroments} from "../../../enviroments/enviroments";
 import {Hero} from "../interfaces/hero.interface";
 
@@ -14,5 +14,15 @@ export class HeroesService {
 
   getHeroes():Observable<Hero[]>{
     return this._http.get<Hero[]>(`${this.baseUrl}/heroes`)
+  }
+
+  getHeroById(id: string):Observable<Hero | undefined>{
+    return this._http.get<Hero>(`${this.baseUrl}/heroes/${id}`).pipe(
+      catchError(_ => of(undefined))
+    );
+  }
+
+  getSuggestions(query: string):Observable<Hero[]>{
+    return this._http.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`);
   }
 }
