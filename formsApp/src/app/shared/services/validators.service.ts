@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {FormControl, FormGroup, ValidationErrors} from "@angular/forms";
+import {AbstractControl, FormControl, FormGroup, ValidationErrors} from "@angular/forms";
 
 
 @Injectable({providedIn: 'root'})
@@ -24,5 +24,20 @@ export class ValidatorsService {
     return !!(form.controls[field].errors && form.controls[field].touched);
   }
 
+  isFieldOneEqualFieldTwo(fieldOne: string, fieldTwo:string){
+    return (formGroup: AbstractControl): ValidationErrors | null => {
+
+      function returnError(field: string){
+        formGroup.get(field)?.setErrors({fieldAreNotEqual: true});
+        return {fieldAsEqual: true}
+      }
+
+      return (formGroup.get(fieldOne)?.value !== formGroup.get(fieldTwo)?.value) ? returnError(fieldTwo) : null;
+    }
+  }
+
+
 
 }
+
+

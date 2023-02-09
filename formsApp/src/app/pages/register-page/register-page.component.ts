@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, Validators} from "@angular/forms";
 import {ValidatorsService} from "../../shared/services/validators.service";
-import {EmailValidatorService} from "../../shared/validators/email-validator.service";
+import {EmailValidator} from "../../shared/validators/email-validator.service";
 
 @Component({
   selector: 'app-register-page',
@@ -10,15 +10,19 @@ import {EmailValidatorService} from "../../shared/validators/email-validator.ser
 })
 export class RegisterPageComponent {
 
-  public myForm: FormGroup = this.fb.group({
+  public myForm = this.fb.group({
     name: ['', [Validators.required, Validators.pattern(this.validatorsService.firstNameAndLastnamePattern)]],
-    email: ['', [Validators.required, Validators.pattern(this.validatorsService.emailPattern)], [EmailValidatorService]],
+    email: ['', [Validators.required, Validators.pattern(this.validatorsService.emailPattern)], [this.emailValidator]],
     username: ['', [Validators.required, this.validatorsService.cantBeStrider]],
     password: ['', [Validators.minLength(6)]],
     password2: ['', [Validators.minLength(6)]],
+  },{
+    validators:[
+      this.validatorsService.isFieldOneEqualFieldTwo('password', 'password2')
+    ]
   });
 
-  constructor(private fb: FormBuilder, private validatorsService: ValidatorsService) {
+  constructor(private fb: FormBuilder, private validatorsService: ValidatorsService, private emailValidator: EmailValidator) {
   }
 
   isValidField(field: string): boolean {
