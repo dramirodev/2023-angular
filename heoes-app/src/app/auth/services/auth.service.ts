@@ -10,6 +10,7 @@ import { User } from '../interfaces/user.interface';
 export class AuthService {
   private baseUrl = environments.baseUrl;
   private user?: User;
+
   constructor(private _httpClient: HttpClient) {}
 
   get currentUser(): User | undefined {
@@ -26,9 +27,9 @@ export class AuthService {
     );
   }
 
-  checkAuthenticationStatus(): Observable<boolean> | boolean {
+  checkAuthenticationStatus(): Observable<boolean> {
     if (!localStorage.getItem('token')) {
-      return false;
+      return of(false);
     }
 
     const token = localStorage.getItem('token');
